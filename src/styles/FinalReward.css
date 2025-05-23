@@ -1,0 +1,130 @@
+.final-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.final-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: var(--highlight);
+  text-shadow: 0 0 10px var(--highlight);
+}
+
+.decrypting {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.loading-bar {
+  width: 300px;
+  height: 20px;
+  background-color: #111;
+  border: 1px solid var(--border-color);
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.loading-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, transparent, var(--highlight));
+  animation: progress 3s linear infinite;
+}
+
+.final-message-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.final-message {
+  background-color: rgba(0, 20, 0, 0.7);
+  border: 1px solid var(--border-color);
+  padding: 30px;
+  margin-bottom: 30px;
+  position: relative;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.message-text {
+  white-space: pre-wrap;
+  line-height: 1.5;
+  margin: 0;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  height: 1.2em;
+  background-color: var(--text-color);
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+.celebration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.sparkle-icon {
+  color: gold;
+  animation: pulse 2s infinite;
+  margin-bottom: 20px;
+}
+
+.restart-button {
+  margin-top: 20px;
+}
+
+@keyframes progress {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .final-title {
+    font-size: 2rem;
+  }
+  
+  .loading-bar {
+    width: 250px;
+  }
+  
+  .final-message {
+    padding: 20px;
+  }
+}

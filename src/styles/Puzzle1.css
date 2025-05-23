@@ -1,0 +1,254 @@
+.puzzle-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+}
+
+.puzzle-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.back-button {
+  background: transparent;
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  padding: 0.5rem 1rem;
+  font-family: 'Courier New', monospace;
+  cursor: pointer;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: rgba(0, 255, 0, 0.1);
+}
+
+.puzzle-title {
+  color: #00ff00;
+  font-size: 2rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.instructions {
+  color: #00ff00;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.morse-container {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #00ff00;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.morse-display {
+  margin-bottom: 2rem;
+}
+
+.morse-code {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  font-family: 'Courier New', monospace;
+  font-size: 1.5rem;
+}
+
+.morse-dot {
+  color: #00ff00;
+  animation: blink 1s infinite;
+}
+
+.morse-dash {
+  color: #00ff00;
+  animation: blink 1.5s infinite;
+}
+
+.morse-space {
+  width: 1rem;
+}
+
+.morse-input {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.terminal-input {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  padding: 0.75rem;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 300px;
+  transition: all 0.3s ease;
+}
+
+.terminal-input:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.terminal-button {
+  background: transparent;
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  padding: 0.75rem 1.5rem;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.terminal-button:hover {
+  background: rgba(0, 255, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.error-message {
+  color: #ff0000;
+  text-align: center;
+  margin: 1rem 0;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+}
+
+.frequency-controls {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #2a2a2a;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+.frequency-slider {
+  width: 100%;
+  height: 4px;
+  -webkit-appearance: none;
+  background: #333;
+  outline: none;
+  border-radius: 2px;
+  margin: 1rem 0;
+}
+
+.frequency-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #0f0;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.frequency-slider::-webkit-slider-thumb:hover {
+  background: #00ff00;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+}
+
+.frequency-labels {
+  display: flex;
+  justify-content: space-between;
+  color: #0f0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+.success-message {
+  text-align: center;
+  padding: 2rem;
+  background-color: #1a1a1a;
+  border: 1px solid #0f0;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+.success-message .blink-slow {
+  color: #0f0;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  animation: blink 2s infinite;
+}
+
+.success-message .key-info {
+  text-align: left;
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: #2a2a2a;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+.success-message .key-info p {
+  color: #0f0;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.success-message .key-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.success-message .key-info li {
+  color: #fff;
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.success-message .key-info li:before {
+  content: ">";
+  color: #0f0;
+  position: absolute;
+  left: 0;
+}
+
+.success-message .button-group {
+  margin-top: 2rem;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.hint-button-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.hint-container {
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid #00ff00;
+  padding: 1rem;
+  margin: 1rem 0;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .puzzle-title {
+    font-size: 2rem;
+  }
+  
+  .document {
+    padding: 20px;
+  }
+}

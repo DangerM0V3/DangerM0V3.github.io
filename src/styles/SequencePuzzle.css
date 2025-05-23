@@ -1,0 +1,129 @@
+.sequence-workspace {
+  width: 100%;
+  max-width: 600px;
+  background-color: rgba(20, 20, 40, 0.7);
+  border: 2px solid var(--border-color);
+  padding: 30px;
+  margin: 20px 0;
+}
+
+.sequence-display {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sequence-display h3 {
+  margin-bottom: 15px;
+  color: var(--dim-text);
+}
+
+.current-input {
+  height: 40px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-display {
+  font-size: 2rem;
+  color: var(--text-color);
+  text-shadow: 0 0 10px var(--text-color);
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.sequence-progress {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.sequence-dot {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sequence-dot.active {
+  background-color: var(--text-color);
+  box-shadow: 0 0 10px var(--text-color);
+}
+
+.dot-value {
+  color: var(--terminal-bg);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.sequence-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.number-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.number-button {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.number-button:hover:not(:disabled) {
+  background-color: rgba(0, 255, 0, 0.1);
+  transform: scale(1.05);
+}
+
+.number-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.clear-button {
+  font-size: 1rem;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.submit-button {
+  font-size: 1rem;
+  background-color: rgba(0, 255, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .sequence-workspace {
+    padding: 20px;
+  }
+  
+  .number-button {
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .sequence-dot {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .dot-value {
+    font-size: 1rem;
+  }
+}

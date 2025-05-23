@@ -1,0 +1,146 @@
+.terminal {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Screen with CRT effect */
+.terminal-screen {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--terminal-bg);
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  box-shadow: inset 0 0 60px rgba(0, 255, 0, 0.1);
+  animation: flicker 0.3s infinite alternate-reverse;
+}
+
+/* Scanline effect */
+.scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0, 0, 0, 0.05) 50%
+  );
+  background-size: 100% 4px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Terminal content area */
+.terminal-content {
+  position: relative;
+  z-index: 1;
+  min-height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Boot sequence styles */
+.boot-sequence {
+  margin-top: 50px;
+}
+
+.boot-message {
+  color: var(--text-color);
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.prompt {
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+/* Main terminal content */
+.terminal-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+/* Screen flickering effect */
+@keyframes flicker {
+  0% {
+    opacity: 0.98;
+  }
+  5% {
+    opacity: 0.97;
+  }
+  10% {
+    opacity: 0.99;
+  }
+  15% {
+    opacity: 0.98;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.99;
+  }
+  30% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0.98;
+  }
+  40% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0.99;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0.98;
+  }
+  60% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0.99;
+  }
+  70% {
+    opacity: 0.98;
+  }
+  75% {
+    opacity: 0.99;
+  }
+  80% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0.99;
+  }
+  90% {
+    opacity: 0.98;
+  }
+  95% {
+    opacity: 0.99;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .terminal-screen {
+    padding: 10px;
+  }
+  
+  .boot-message {
+    font-size: 16px;
+  }
+}

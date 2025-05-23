@@ -1,0 +1,107 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.not-found h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.error-message {
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.error-message p {
+  margin-bottom: 15px;
+}
+
+.countdown {
+  color: var(--warning);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.error-static {
+  width: 300px;
+  height: 200px;
+  background-color: #111;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIj48ZmlsdGVyIGlkPSJub2lzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNjUiIG51bU9jdGF2ZXM9IjMiIHN0aXRjaFRpbGVzPSJzdGl0Y2giIHNlZWQ9IjEiIHJlc3VsdD0idHVyYnVsZW5jZV8xIj48L2ZlVHVyYnVsZW5jZT48ZmVDb2xvck1hdHJpeCB0eXBlPSJzYXR1cmF0ZSIgdmFsdWVzPSIwIiBpbj0idHVyYnVsZW5jZV8xIiByZXN1bHQ9Im5vaXNlIj48L2ZlQ29sb3JNYXRyaXg+PGZlQmxlbmQgbW9kZT0ib3ZlcmxheSIgaW49Im5vaXNlIiBpbjI9InNvdXJjZUdyYXBoaWMiIG9wYWNpdHk9IjAuOCI+PC9mZUJsZW5kPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMDAwIiBmaWx0ZXI9InVybCgjbm9pc2UpIj48L3JlY3Q+PC9zdmc+');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-static::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    transparent 0%,
+    rgba(32, 128, 32, 0.2) 2%,
+    transparent 3%,
+    transparent 30%,
+    rgba(32, 128, 32, 0.2) 31%,
+    transparent 33%,
+    transparent 70%,
+    rgba(32, 128, 32, 0.2) 71%,
+    transparent 73%,
+    transparent 97%,
+    rgba(32, 128, 32, 0.2) 98%,
+    transparent 100%
+  );
+  background-size: 100% 10px;
+  animation: scan 5s linear infinite;
+}
+
+.secret-message {
+  color: var(--warning);
+  font-weight: bold;
+  z-index: 2;
+  text-shadow: 0 0 10px var(--warning);
+  animation: reveal 1s ease-in-out;
+}
+
+.secret-code {
+  letter-spacing: 3px;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .not-found h1 {
+    font-size: 3rem;
+  }
+  
+  .error-static {
+    width: 260px;
+    height: 180px;
+  }
+}

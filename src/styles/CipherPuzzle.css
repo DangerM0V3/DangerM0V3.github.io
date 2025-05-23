@@ -1,0 +1,307 @@
+.cipher-workspace {
+  width: 100%;
+  max-width: 800px;
+  background-color: rgba(20, 20, 40, 0.7);
+  border: 2px solid var(--border-color);
+  padding: 30px;
+  margin: 20px 0;
+}
+
+.binary-display {
+  background-color: #000;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-family: 'Share Tech Mono', monospace;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.binary-stream {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  animation: scroll 20s linear infinite;
+}
+
+.highlight-subtle {
+  color: var(--text-color);
+  opacity: 0.8;
+  text-shadow: 0 0 5px var(--text-color);
+}
+
+.workspace-tools {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.tool-panel {
+  background-color: rgba(0, 20, 0, 0.5);
+  padding: 20px;
+  border: 1px solid var(--border-color);
+}
+
+.tool-panel h3 {
+  margin-bottom: 15px;
+  color: var(--dim-text);
+}
+
+.tool-button {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: 'Share Tech Mono', monospace;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tool-button:hover {
+  background-color: rgba(0, 255, 0, 0.1);
+}
+
+.notes-panel {
+  background-color: rgba(0, 20, 0, 0.5);
+  padding: 20px;
+  border: 1px solid var(--border-color);
+}
+
+.notes-panel h3 {
+  margin-bottom: 15px;
+  color: var(--dim-text);
+}
+
+.notes-container {
+  height: 200px;
+  overflow-y: auto;
+}
+
+.note-entry {
+  padding: 8px;
+  border-bottom: 1px solid rgba(0, 255, 0, 0.1);
+  font-size: 0.9rem;
+}
+
+.solution-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.solution-input {
+  flex: 1;
+  background-color: #000;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .workspace-tools {
+    grid-template-columns: 1fr;
+  }
+  
+  .solution-form {
+    flex-direction: column;
+  }
+}
+
+.puzzle-container {
+  background-color: #000;
+  color: #0f0;
+  font-family: 'Courier New', monospace;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.matrix-theme {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+              repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 255, 0, 0.1) 2px, rgba(0, 255, 0, 0.1) 4px);
+}
+
+.matrix-text {
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0;
+}
+
+.matrix-display {
+  background-color: rgba(0, 20, 0, 0.8);
+  border: 1px solid #0f0;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 0 10px #0f0;
+}
+
+.matrix-code {
+  font-family: 'Courier New', monospace;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+.matrix-line {
+  animation: matrixRain 0.5s linear forwards;
+  opacity: 0;
+}
+
+@keyframes matrixRain {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.matrix-hint {
+  color: #0f0;
+  font-size: 1.2em;
+  text-align: center;
+  margin: 10px 0;
+  opacity: 0.7;
+}
+
+.matrix-input {
+  background-color: rgba(0, 20, 0, 0.8);
+  border: 1px solid #0f0;
+  color: #0f0;
+  padding: 10px;
+  font-family: 'Courier New', monospace;
+}
+
+.matrix-button {
+  background-color: rgba(0, 20, 0, 0.8);
+  border: 1px solid #0f0;
+  color: #0f0;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.matrix-button:hover {
+  background-color: #0f0;
+  color: #000;
+  box-shadow: 0 0 10px #0f0;
+}
+
+.matrix-hint-box {
+  background-color: rgba(0, 20, 0, 0.8);
+  border: 1px solid #0f0;
+  padding: 15px;
+  margin: 20px 0;
+  box-shadow: 0 0 10px #0f0;
+}
+
+.matrix-success {
+  background-color: rgba(0, 20, 0, 0.8);
+  border: 1px solid #0f0;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 0 20px #0f0;
+}
+
+.blink-slow {
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+.error {
+  color: #f00;
+  text-shadow: 0 0 5px #f00;
+}
+
+.info {
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0;
+}
+
+.puzzle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.puzzle-title {
+  font-size: 2em;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.instructions {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.2em;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.decoder-input {
+  flex-grow: 1;
+  font-size: 1.1em;
+}
+
+.message {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+.hint-button-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.key-info {
+  margin: 20px 0;
+}
+
+.key-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.key-info li {
+  margin: 10px 0;
+}
+
+.button-group {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .matrix-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .puzzle-title {
+    font-size: 1.5rem;
+  }
+}
