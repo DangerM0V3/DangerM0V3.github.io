@@ -18,7 +18,7 @@ const FinalReward: React.FC = () => {
 YOU HAVE SUCCESSFULLY COMPLETED OPERATION MIDNIGHT.
 
 YOUR SPECIAL GIFT IS WAITING FOR YOU AT:
-[Location or details about where to find the physical gift]
+[send "Troll16" to me for it)]
 
 MISSION DETAILS:
 This was created especially for you as a unique birthday gift! 
