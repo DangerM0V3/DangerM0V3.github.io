@@ -1,26 +1,26 @@
 // Audio file URLs
 const sounds = {
-  'keypress': './src/utils/audio/keypress.wav',
-  'access-granted': './src/utils/audio/accesG.mp3',
-  'access-denied': './src/utils/audio/accesD.mp3',
-  'discovery': './src/utils/audio/discover.mp3',
-  'level-complete': './src/utils/audio/LvlC.mp3',
+  'keypress': '/audio/keypress.wav',
+  'access-granted': '/audio/accesG.mp3',
+  'access-denied': '/audio/accesD.mp3',
+  'discovery': '/audio/discover.mp3',
+  'level-complete': '/audio/LvlC.mp3',
   'mission-complete': 'https://assets.mixkit.co/active_storage/sfx/1339/1339-preview.mp3',
-  'switch': './src/utils/audio/switch.mp3',
+  'switch': '/audio/switch.mp3',
   'signal-found': 'https://assets.mixkit.co/active_storage/sfx/2308/2308-preview.mp3',
-  'ambient': './src/utils/audio/ambientGOAT.mp3',
-  'boot': './src/utils/audio/boot.mp3',
+  'ambient': '/audio/ambientGOAT.mp3',
+  'boot': '/audio/boot.mp3',
   // Sequence note sounds
-  'sequence/OOT_Notes_Flute_D_long': './src/utils/audio/sequence/OOT_Notes_Flute_D_long.wav',
-  'sequence/OOT_Notes_Flute_D_short': './src/utils/audio/sequence/OOT_Notes_Flute_D_short.wav',
-  'sequence/OOT_Notes_Flute_D2_long': './src/utils/audio/sequence/OOT_Notes_Flute_D2_long.wav',
-  'sequence/OOT_Notes_Flute_D2_short': './src/utils/audio/sequence/OOT_Notes_Flute_D2_short.wav',
-  'sequence/OOT_Notes_Flute_F_long': './src/utils/audio/sequence/OOT_Notes_Flute_F_long.wav',
-  'sequence/OOT_Notes_Flute_F_short': './src/utils/audio/sequence/OOT_Notes_Flute_F_short.wav',
-  'sequence/OOT_Notes_Flute_A_long': './src/utils/audio/sequence/OOT_Notes_Flute_A_long.wav',
-  'sequence/OOT_Notes_Flute_A_short': './src/utils/audio/sequence/OOT_Notes_Flute_A_short.wav',
-  'sequence/OOT_Notes_Flute_B_long': './src/utils/audio/sequence/OOT_Notes_Flute_B_long.wav',
-  'sequence/OOT_Notes_Flute_B_short': './src/utils/audio/sequence/OOT_Notes_Flute_B_short.wav'
+  'sequence/OOT_Notes_Flute_D_long': '/audio/sequence/OOT_Notes_Flute_D_long.wav',
+  'sequence/OOT_Notes_Flute_D_short': '/audio/sequence/OOT_Notes_Flute_D_short.wav',
+  'sequence/OOT_Notes_Flute_D2_long': '/audio/sequence/OOT_Notes_Flute_D2_long.wav',
+  'sequence/OOT_Notes_Flute_D2_short': '/audio/sequence/OOT_Notes_Flute_D2_short.wav',
+  'sequence/OOT_Notes_Flute_F_long': '/audio/sequence/OOT_Notes_Flute_F_long.wav',
+  'sequence/OOT_Notes_Flute_F_short': '/audio/sequence/OOT_Notes_Flute_F_short.wav',
+  'sequence/OOT_Notes_Flute_A_long': '/audio/sequence/OOT_Notes_Flute_A_long.wav',
+  'sequence/OOT_Notes_Flute_A_short': '/audio/sequence/OOT_Notes_Flute_A_short.wav',
+  'sequence/OOT_Notes_Flute_B_long': '/audio/sequence/OOT_Notes_Flute_B_long.wav',
+  'sequence/OOT_Notes_Flute_B_short': '/audio/sequence/OOT_Notes_Flute_B_short.wav'
 };
 
 type SoundName = keyof typeof sounds;
